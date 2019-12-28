@@ -1,0 +1,125 @@
+Received: from DM6PR12MB4203.namprd12.prod.outlook.com (2603:10b6:208:35::25)
+ by BL0PR12MB2532.namprd12.prod.outlook.com with HTTPS via
+ BL0PR02CA0120.NAMPRD02.PROD.OUTLOOK.COM; Sat, 28 Dec 2019 05:58:31 +0000
+Received: from BN8PR12CA0004.namprd12.prod.outlook.com (2603:10b6:408:60::17)
+ by DM6PR12MB4203.namprd12.prod.outlook.com (2603:10b6:5:21f::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2581.11; Sat, 28 Dec
+ 2019 05:58:30 +0000
+Received: from CO1NAM03FT035.eop-NAM03.prod.protection.outlook.com
+ (2a01:111:f400:7e48::204) by BN8PR12CA0004.outlook.office365.com
+ (2603:10b6:408:60::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2581.11 via Frontend
+ Transport; Sat, 28 Dec 2019 05:58:29 +0000
+Received: from autodiscover.bgcpartners.com (148.106.4.6) by
+ CO1NAM03FT035.mail.protection.outlook.com (10.152.80.179) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256) id
+ 15.20.2581.11 via Frontend Transport; Sat, 28 Dec 2019 05:58:28 +0000
+Received: from TBPINFN2214.cad.local (10.22.37.34) by TBPINFN2214.cad.local
+ (10.22.37.34) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1591.10; Sat, 28
+ Dec 2019 00:58:27 -0500
+Received: from TBPINFS0242.cad.local (10.22.36.83) by TBPINFN2214.cad.local
+ (10.22.37.34) with Microsoft SMTP Server (version=TLS1_0,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P256) id 15.1.1591.10 via Frontend
+ Transport; Sat, 28 Dec 2019 00:58:27 -0500
+Received: from tbpinfg2241.cad.local (10.22.84.40) by TBPINFS0242.cad.local
+ (10.22.36.83) with Microsoft SMTP Server id 14.3.439.0; Sat, 28 Dec 2019
+ 00:58:26 -0500
+Received: from usbgcadm-vp1.ny.cantor.com ([10.22.84.6]) by
+ tbpinfg2241.cad.local with Microsoft SMTPSVC(8.5.9600.16384);	 Sat, 28 Dec
+ 2019 00:58:27 -0500
+Received: (from jkendall@localhost)	by usbgcadm-vp1.ny.cantor.com
+ (8.14.4/8.14.4/Submit) id xBS5wRZx024158	for jkendall@bgcpartners.com; Sat,
+ 28 Dec 2019 00:58:27 -0500
+From: Kendall <jkendall@usbgcadm-vp1.ny.cantor.com>
+To: "Kendall, Jason" <JKendall@bgcpartners.com>
+Subject: 10.py
+Thread-Topic: 10.py
+Thread-Index: AQHVvUPVTuZIAhLSOUSpGU5BQI1h6w==
+Date: Sat, 28 Dec 2019 05:58:27 +0000
+Message-ID: <201912280558.xBS5wRZx024158@usbgcadm-vp1.ny.cantor.com>
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 10
+X-MS-Exchange-Organization-AuthSource: TBPINFS0242.cad.local
+X-MS-Has-Attach: 
+X-MS-Exchange-Organization-Network-Message-Id: 
+ 40b2a4ee-5e8c-4179-3323-08d78b5af620
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator: 
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-exchange-organization-originalclientipaddress: 10.22.84.40
+x-ms-exchange-organization-originalserveripaddress: 10.152.80.179
+user-agent: Heirloom mailx 12.4 7/29/08
+x-originalarrivaltime: 28 Dec 2019 05:58:27.0166 (UTC)
+ FILETIME=[D2A317E0:01D5BD43]
+authentication-results: spf=none (sender IP is 148.106.4.6)
+ smtp.mailfrom=usbgcadm-vp1.ny.cantor.com; bgccs.mail.onmicrosoft.com;
+ dkim=none (message not signed) header.d=none;bgccs.mail.onmicrosoft.com;
+ dmarc=fail action=none header.from=usbgcadm-vp1.ny.cantor.com;
+x-forefront-antispam-report: 
+ CIP:148.106.4.6;IPV:;CTRY:US;EFV:NLI;SFV:SKI;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:DM6PR12MB4203;H:autodiscover.bgcpartners.com;FPR:;SPF:None;LANG:en;
+received-spf: None (protection.outlook.com: usbgcadm-vp1.ny.cantor.com does
+ not designate permitted sender hosts)
+x-ms-publictraffictype: Email
+X-Microsoft-Antispam-Mailbox-Delivery: 
+ ucf:0;jmr:0;ex:0;auth:0;dest:I;ENG:(750127)(520011016)(706158)(944506383)(944626516);
+X-Microsoft-Antispam-Message-Info: 
+ bbNzJ62Po2LnPBo8tPcqnqeaImpO+xNA93oS3VQHGi5HWg1tahN3UWSMhWFbgM6W1n8/yXUbKMDdf6IbarcBqp8npjavJB9Ur5A/kvlQI8+XmEIZucFxDSf9oGZfGiVyCS0uq0y8G6rqIxetk29PU+jUtNSO4mdZ0SDKcwJSUjHYY5F/oZ2rCPs0i3j3O3PIpPKpOTIN9k4FuF/YflCfmLFmUsvmmlRVTEJ8ER1EeqDiOJeTExftjUnX48VM6yZM3o6J2FzZA66YR29xaix1dfHQhMt69WsFGlD1KC6n09190vmEZfKQNLndx7umemZ7d/YA2GjdqeY5vaFz0K7L5hAt/epW/ArvozDaR3ECwObmjOQfeJdHEQ58oAUkDnutv+DJczqXTdEVzpEkw96H0kvyITV0J5lhC1pFZAQ+P3TT2/5xDT9m+7EFWYv3A/+8YdUOdY2Hojv+xd2JpQ2joQk8AO6NttH8wyI/WEiX+7TEbZhAQw7tSVHniPm288cb
+Content-Type: text/plain; charset="us-ascii"
+Content-ID: <91066E61439BAA488562AE5190D19E05@namprd12.prod.outlook.com>
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+#!python
+
+problem =3D """
+The sum of the primes below 10 is 2 + 3 + 5 + 7 =3D 17.
+
+Find the sum of all the primes below two million.
+
+https://projecteuler.net/problem=3D10
+
+"""
+
+print(problem)
+
+top =3D 2000000
+primeset =3D [2,3]
+
+possibles=3D[]
+
+
+x=3D3
+while x < top:
+  possibles.append(x)
+  x+=3D2
+
+p=3D3
+while (len(possibles)) > 0:
+  zoop1=3Dlen(possibles)
+  zoop2=3Dlen(primeset)
+  print("current prime:",p,",possibles:",zoop1,",  primeset:",zoop2)
+  for x in possibles:
+    if ( x % p ) =3D=3D 0:
+      possibles.remove(x)
+  p=3Dpossibles[0]
+  primeset.append(p)
+  del possibles[0]
+  if p > top**(1/2):
+    break
+
+allprimes=3Dprimeset+possibles
+
+sum=3D0
+n=3D1
+for p in allprimes:
+  sum+=3Dp
+  print(n,p,sum)
+  n+=3D1
+
+
+
+
+
