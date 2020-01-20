@@ -56,16 +56,45 @@ list_of_lists.append(newline)
 list_of_lists.append(newline)
 list_of_lists.append(newline)
 
-print(list_of_lists)
+for s in list_of_lists:
+  print(*s)
 
 
 
 
-i=0
-while i < whut-4:
-  j=0
-  while j < numlines:
-    print(i,j)
+keepi=0
+keepj=0
+keeporient="none"
+topproduct=0
+
+def keep_the_product(thisorient, i, j, i1,j1,i2,j2,i3,j3,i4,j4):
+  print( thisorient, i1,j1,i2,j2,i3,j3,i4,j4)
+  print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+  test_product=list_of_lists[i1][j1] * list_of_lists[i2][j2] * list_of_lists[i3][j3] * list_of_lists[i4][j4]
+  if test_product > topproduct:
+    topproduct=topproduct
+    keeporient=thisorient
+    keepi=i
+    keepj=j
+
+
+
+j=3
+while j < whut-3:
+  i=0
+  while i < numlines:
+    print('coords: ', i,j)
+
+    keep_the_product( 'right', i, j, i, i, i, i, j, j+1, j+2, j+3 )
+    
+    print( thisorient, i1,j1,i2,j2,i3,j3,i4,j4)
+    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+    test_product=list_of_lists[i1][j1] * list_of_lists[i2][j2] * list_of_lists[i3][j3] * list_of_lists[i4][j4]
+    if test_product > topproduct:
+      topproduct=topproduct
+      keeporient=thisorient
+      keepi=i
+      keepj=j
 
     i1=i
     i2=i+1
@@ -75,20 +104,10 @@ while i < whut-4:
     j2=j
     j3=j
     j4=j
-    print('right: ',i1,j1,i2,j2,i3,j3,i4,j4)
-    print( list_of_lists[i1][j1])
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2])
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3])
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
-    i1=i
-    i2=i
-    i3=i
-    i4=i
-    j1=j
-    j2=j+1
-    j3=j+2
-    j4=j+3
     print('down:  ',i1,j1,i2,j2,i3,j3,i4,j4)
+    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+
+
     i1=i
     i2=i+1
     i3=i+2
@@ -98,14 +117,19 @@ while i < whut-4:
     j3=j+2
     j4=j+3
     print('diagdr:',i1,j1,i2,j2,i3,j3,i4,j4)
+    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+
     i1=i
-    i2=i-1
-    i3=i-2
-    i4=i-3
+    i2=i+1
+    i3=i+2
+    i4=i+3
     j1=j
-    j2=j+1
-    j3=j+2
-    j4=j+3
+    j2=j-1
+    j3=j-2
+    j4=j-3
     print('diagdl:',i1,j1,i2,j2,i3,j3,i4,j4)
-    j+=1
-  i+=1
+    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+
+
+    i+=1
+  j+=1
