@@ -27,10 +27,8 @@ The four adjacent digits in the 1000-digit number that have the greatest product
 Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 """
 
-
 #  loop bad.  use math
 # https://projecteuler.net/problem=7
-
 
 print(problem)
 
@@ -41,8 +39,6 @@ top="731671765313306249192251196744265747423553491949349698352031277450632623957
 # print (top)
 x = top.rsplit("0")
 # print (x)
-
-
 
 maxproduct=1
 for y in x:
@@ -63,6 +59,7 @@ for y in x:
         maxproduct=bigthing
         maxstring=keepit
         print('found: ',keepit,' ',maxproduct)
+
 print('')
 print('largest product: ',maxproduct,' From string:',maxstring)
 
