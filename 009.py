@@ -27,7 +27,7 @@ while b<497:
     if z==0:
       aa=a
       bb=b
-    print(a,b,z)
+#    print(a,b,z)
     a+=1
   a=1
   b+=1
