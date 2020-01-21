@@ -32,6 +32,7 @@ https://projecteuler.net/problem=11
 
 """
 
+
 print(problem)
 
 numlines=0
@@ -41,8 +42,8 @@ with open('011-data.txt') as f:
     numlines+=1
     inner_list = [int(elt.strip()) for elt in line.split(' ')]
     inner_list = [0,0,0] + inner_list + [0,0,0]
-    whut = len(inner_list) 
-    print(inner_list)
+    whut = len(inner_list)
+#   print(inner_list)
     list_of_lists.append(inner_list)
 
 i=0
@@ -56,26 +57,29 @@ list_of_lists.append(newline)
 list_of_lists.append(newline)
 list_of_lists.append(newline)
 
-for s in list_of_lists:
-  print(*s)
-
-
-
+#for s in list_of_lists:
+#  print(*s)
 
 keepi=0
 keepj=0
 keeporient="none"
 topproduct=0
 
-def keep_the_product(thisorient, i, j, i1,j1,i2,j2,i3,j3,i4,j4):
-  print( thisorient, i1,j1,i2,j2,i3,j3,i4,j4)
-  print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+def keep_the_product():
+  global keepi, keepj, keeporient, topproduct
+  global i1,i2,i3,i4,j1,j2,j3,j4,thisorient
+  global keepi1,keepi2,keepi3,keepi4,keepj1,keepj2,keepj3,keepj4
   test_product=list_of_lists[i1][j1] * list_of_lists[i2][j2] * list_of_lists[i3][j3] * list_of_lists[i4][j4]
   if test_product > topproduct:
-    topproduct=topproduct
+    #print()
+    #print( thisorient," coords: ", i1,j1,",", i2,j2, ",", i3,j3, ",", i4,j4)
+    #print( "values: ",  list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
+    #print("product: ", test_product)
+    topproduct=test_product
     keeporient=thisorient
-    keepi=i
-    keepj=j
+    keepi,keepj=i,j
+    keepi1,keepi2,keepi3,keepi4=i1,i2,i3,i4
+    keepj1,keepj2,keepj3,keepj4=j1,j2,j3,j4
 
 
 
@@ -83,19 +87,27 @@ j=3
 while j < whut-3:
   i=0
   while i < numlines:
-    print('coords: ', i,j)
+    #print('coords: ', i,j)
 
-    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i, i, i, j, j+1, j+2, j+3, "right"
-    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+    i1,i2,i3,i4,j1,j2,j3,j4,thisorient = i, i, i, i, j, j+1, j+2, j+3, "right"
+    keep_the_product()
 
-    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i+1, i+2, i+3, j, j, j, j, "down"
-    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+    i1,i2,i3,i4,j1,j2,j3,j4,thisorient = i, i+1, i+2, i+3, j, j, j, j, "down"
+    keep_the_product()
 
-    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i+1, i+2, i+3, j, j+1, j+2, j+3, "diagdr"
-    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+    i1,i2,i3,i4,j1,j2,j3,j4,thisorient = i, i+1, i+2, i+3, j, j+1, j+2, j+3, "diagdr"
+    keep_the_product()
 
-    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i+1, i+2, i+3, j, j-1, j-2, j-3, "diagdl"
-    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+    i1,i2,i3,i4,j1,j2,j3,j4,thisorient = i, i+1, i+2, i+3, j, j-1, j-2, j-3, "diagdl"
+    keep_the_product()
 
     i+=1
   j+=1
+
+
+
+print()
+print( keeporient," coords: ",keepi1,keepj1-3,",",keepi2,keepj2-3,",",keepi3,keepj3-3,",",keepi4,keepj4-3)
+print( "values: ",  list_of_lists[keepi1][keepj1], list_of_lists[keepi2][keepj2], list_of_lists[keepi3][keepj3], list_of_lists[keepi4][keepj4])
+print("product: ", topproduct)
+
