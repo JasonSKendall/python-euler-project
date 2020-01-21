@@ -32,7 +32,6 @@ https://projecteuler.net/problem=11
 
 """
 
-
 print(problem)
 
 numlines=0
@@ -51,7 +50,6 @@ newline = []
 while i < whut:
   newline=[0] + newline
   i+=1
-
 
 list_of_lists.append(newline)
 list_of_lists.append(newline)
@@ -81,8 +79,6 @@ def keep_the_product():
     keepi1,keepi2,keepi3,keepi4=i1,i2,i3,i4
     keepj1,keepj2,keepj3,keepj4=j1,j2,j3,j4
 
-
-
 j=3
 while j < whut-3:
   i=0
@@ -104,10 +100,11 @@ while j < whut-3:
     i+=1
   j+=1
 
-
-
 print()
-print( keeporient," coords: ",keepi1,keepj1-3,",",keepi2,keepj2-3,",",keepi3,keepj3-3,",",keepi4,keepj4-3)
-print( "values: ",  list_of_lists[keepi1][keepj1], list_of_lists[keepi2][keepj2], list_of_lists[keepi3][keepj3], list_of_lists[keepi4][keepj4])
+print( keeporient )
+print( "Coordinates and values")
+print( "(",keepi1,",",keepj1-3,") = ",list_of_lists[keepi1][keepj1] )
+print( "(",keepi2,",",keepj2-3,") = ",list_of_lists[keepi2][keepj2] )
+print( "(",keepi3,",",keepj3-3,") = ",list_of_lists[keepi3][keepj3] )
+print( "(",keepi4,",",keepj4-3,") = ",list_of_lists[keepi4][keepj4] )
 print("product: ", topproduct)
-
