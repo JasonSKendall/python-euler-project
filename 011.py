@@ -34,6 +34,13 @@ https://projecteuler.net/problem=11
 
 print(problem)
 
+
+from datetime import datetime
+
+dateTimeObj = datetime.now()
+print(dateTimeObj)
+
+
 numlines=0
 list_of_lists = []
 with open('011-data.txt') as f:
@@ -108,3 +115,8 @@ print( "(",keepi2,",",keepj2-3,") = ",list_of_lists[keepi2][keepj2] )
 print( "(",keepi3,",",keepj3-3,") = ",list_of_lists[keepi3][keepj3] )
 print( "(",keepi4,",",keepj4-3,") = ",list_of_lists[keepi4][keepj4] )
 print("product: ", topproduct)
+
+
+dateTimeObj = datetime.now()
+print(dateTimeObj)
+
