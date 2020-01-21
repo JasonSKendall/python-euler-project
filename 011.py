@@ -62,17 +62,17 @@ list_of_lists.append(newline)
 list_of_lists.append(newline)
 list_of_lists.append(newline)
 
-keepi,keepj,keeporient,topproduct=0,0,"none",0
+keeporient,topproduct="none",0
 
 def keep_the_product():
-  global keepi, keepj, keeporient, topproduct
+  global keeporient, topproduct
   global i1,i2,i3,i4,j1,j2,j3,j4,thisorient
   global keepi1,keepi2,keepi3,keepi4,keepj1,keepj2,keepj3,keepj4
   test_product=list_of_lists[i1][j1] * list_of_lists[i2][j2] * list_of_lists[i3][j3] * list_of_lists[i4][j4]
   if test_product > topproduct:
     topproduct,keeporient=test_product,thisorient
-    keepi,keepi1,keepi2,keepi3,keepi4=i,i1,i2,i3,i4
-    keepj,keepj1,keepj2,keepj3,keepj4=j,j1,j2,j3,j4
+    keepi1,keepi2,keepi3,keepi4=i1,i2,i3,i4
+    keepj1,keepj2,keepj3,keepj4=j1,j2,j3,j4
 
 j=3
 while j < whutsthelength-3:
