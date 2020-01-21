@@ -54,7 +54,7 @@ with open('011-data.txt') as f:
 
 i=0
 newline = []
-while i < whut:
+while i < whutsthelength:
   newline=[0] + newline
   i+=1
 
