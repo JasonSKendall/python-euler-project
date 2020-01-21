@@ -85,51 +85,10 @@ while j < whut-3:
   while i < numlines:
     print('coords: ', i,j)
 
-    keep_the_product( 'right', i, j, i, i, i, i, j, j+1, j+2, j+3 )
+    keep_the_product( 'right',  i, j, i, i, i, i, j, j+1, j+2, j+3 )
+    keep_the_product( 'down',   i, j, i, i+1, i+2, i+3, j, j, j, j )
+    keep_the_product( 'diagdr', i, j, i, i+1, i+2, i+3, j, j+1, j+2, j+3 )
+    keep_the_product( 'diagdl', i, j, i, i+1, i+2, i+3, j, j-1, j-2, j-3 )
     
-    print( thisorient, i1,j1,i2,j2,i3,j3,i4,j4)
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
-    test_product=list_of_lists[i1][j1] * list_of_lists[i2][j2] * list_of_lists[i3][j3] * list_of_lists[i4][j4]
-    if test_product > topproduct:
-      topproduct=topproduct
-      keeporient=thisorient
-      keepi=i
-      keepj=j
-
-    i1=i
-    i2=i+1
-    i3=i+2
-    i4=i+3
-    j1=j
-    j2=j
-    j3=j
-    j4=j
-    print('down:  ',i1,j1,i2,j2,i3,j3,i4,j4)
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
-
-
-    i1=i
-    i2=i+1
-    i3=i+2
-    i4=i+3
-    j1=j
-    j2=j+1
-    j3=j+2
-    j4=j+3
-    print('diagdr:',i1,j1,i2,j2,i3,j3,i4,j4)
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
-
-    i1=i
-    i2=i+1
-    i3=i+2
-    i4=i+3
-    j1=j
-    j2=j-1
-    j3=j-2
-    j4=j-3
-    print('diagdl:',i1,j1,i2,j2,i3,j3,i4,j4)
-    print( list_of_lists[i1][j1], list_of_lists[i2][j2], list_of_lists[i3][j3], list_of_lists[i4][j4])
-
-
     i+=1
   j+=1
