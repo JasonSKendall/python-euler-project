@@ -85,10 +85,17 @@ while j < whut-3:
   while i < numlines:
     print('coords: ', i,j)
 
-    keep_the_product( 'right',  i, j, i, i, i, i, j, j+1, j+2, j+3 )
-    keep_the_product( 'down',   i, j, i, i+1, i+2, i+3, j, j, j, j )
-    keep_the_product( 'diagdr', i, j, i, i+1, i+2, i+3, j, j+1, j+2, j+3 )
-    keep_the_product( 'diagdl', i, j, i, i+1, i+2, i+3, j, j-1, j-2, j-3 )
-    
+    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i, i, i, j, j+1, j+2, j+3, "right"
+    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+
+    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i+1, i+2, i+3, j, j, j, j, "down"
+    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+
+    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i+1, i+2, i+3, j, j+1, j+2, j+3, "diagdr"
+    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+
+    i1,j1,i2,j2,i3,j3,i4,j4,thisorient = i, i+1, i+2, i+3, j, j-1, j-2, j-3, "diagdl"
+    keep_the_product( thisorient, i, j, i1, i2, i3, i4, j1, j2, j3, j4 )
+
     i+=1
   j+=1
