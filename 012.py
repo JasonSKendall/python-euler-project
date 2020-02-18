@@ -35,34 +35,13 @@ The number of divisors is D = PI(m+1)
 
 600 = 2^3 * 3 * 5^2 --> (3+1)(1+1)(2+1) = 24 divisors
 
-SO...
-
-We want to find the smallest number with at least 501 divisors.
-
-501 = 3 * 167
-502 = 2 * 251
-503 = 1 * 503
-504 = 2 * 2 * 2 * 3 * 3 * 7
-505 = 5 * 101
-506 = 2 * 11 * 23
-507 = 3 * 13 * 13
-508 = 2 * 2 * 127
-509 = 1 * 509
-510 = 2 * 5 * 51
-511 = 7 * 73
-512 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
-
-1 + 2 + 3 + 4 + 5 + 6 + 7 = 28
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45
-
 """
 
 print(problem)
 
 # first get the list of the first X primes:
 import math
-top=10000
+top=3000
 primeset=[2,3]
 m=1
 x=len(primeset)
@@ -85,19 +64,38 @@ while x < top:
   m+=1
 
 
-n = 1
-while n < 600:
-  print()
-  tri = int(n * ( n+1 ) /2)
-  maxprime = int(math.sqrt(tri))
-  print(n,tri,maxprime)
-  primsubset = [ x for x in primeset if x <= maxprime ]
-  print(primsubset)
-  testtri = tri
-  listofdivs=[]
-  for m in primsubset:
-    if testtri % m:
-      listofdivs.append(m)
 
+n = 2
+bigtop=50000
+dictofmax={'n':0,'Tri':0,'Expos':0}
+numofdivs=0
+
+while numofdivs < 500:
+  keeptri = int(n * ( n+1 ) /2)
+  tri=keeptri
+  listofdivs=[]
+  while tri > 1:
+    for m in primeset:
+      if m <= tri:
+        if ( tri % m ) == 0:
+          listofdivs.append(m)
+          tri /= m
+  setofdivs=set(listofdivs)
+  dicty={}
+  numofdivs=1
+  for p in setofdivs:
+    expo=listofdivs.count(p)
+    numofdivs*=(expo+1)
+    dicty[p]=expo
+
+  if numofdivs > dictofmax['Expos']:
+    dictofmax['n']=n
+    dictofmax['Tri']=keeptri
+    dictofmax['Expos']=numofdivs
+    print(n,keeptri,listofdivs,setofdivs,dicty,numofdivs,dictofmax)
 
   n+=1
+
+print()
+print(keeptri,numofdivs)
+
