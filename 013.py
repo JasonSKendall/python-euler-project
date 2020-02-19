@@ -124,8 +124,9 @@ print(problem)
 biglist=biglistofnumbers.splitlines()
 
 lastdigsum=0
+howmany=range(len(biglist))
 while len(biglist[0]) > 0:
-  for i in range(len(biglist)):
+  for i in howmany:
     lastdigsum+=int(biglist[i][-1])
     biglist[i]=biglist[i][:-1]
   lastdigsum/=10
@@ -133,7 +134,7 @@ while len(biglist[0]) > 0:
 
 foo=str(lastdigsum)
 print()
-print(foo.replace('.','')[:10] )
+print( foo.replace('.','')[:10] )
 print('5537376230 are the first ten digits according to the internet')
 
 end = timer()
