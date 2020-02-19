@@ -126,9 +126,8 @@ biglist=biglistofnumbers.splitlines()
 lastdigsum=0
 while len(biglist[0]) > 0:
   for i in range(len(biglist)):
-    n=biglist[i]
-    lastdigsum+=int(n[-1])
-    biglist[i]=n[:-1]
+    lastdigsum+=int(biglist[i][-1])
+    biglist[i]=biglist[i][:-1]
   lastdigsum/=10
   print(lastdigsum)
 
