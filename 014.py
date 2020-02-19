@@ -1,9 +1,7 @@
 #!python
 
-
 from timeit import default_timer as timer
 start = timer()
-
 
 problem = """
 https://projecteuler.net/problem=14
@@ -45,8 +43,8 @@ while n < 1000000:
       i=int(i/2)
     if i in cachedchains:
       cachedchains[n] = len(chainlist) + cachedchains[i]
-      i=1
       wenttoone=False
+      break
     else:
       chainlist.append(i)
 
@@ -60,6 +58,9 @@ while n < 1000000:
   n+=1
 
 print()
+
+
+
 print('The starting number 837799 produces a sequence of 525, according to the internet.')
 
 end = timer()
