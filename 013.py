@@ -109,7 +109,7 @@ biglistofnumbers="""37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
-print(problem)
+# print(problem)
 
 # method:
 # leave it all as strings
@@ -122,15 +122,14 @@ print(problem)
 #
 
 biglist=biglistofnumbers.splitlines()
-
-lastdigsum=0
 howmany=range(len(biglist))
+lastdigsum=0
+
 while len(biglist[0]) > 0:
   for i in howmany:
     lastdigsum+=int(biglist[i][-1])
     biglist[i]=biglist[i][:-1]
   lastdigsum/=10
-  print(lastdigsum)
 
 foo=str(lastdigsum)
 print()
