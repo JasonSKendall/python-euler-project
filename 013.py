@@ -1,9 +1,7 @@
 #!python
 
-
 from timeit import default_timer as timer
 start = timer()
-
 
 problem = """
 https://projecteuler.net/problem=13
@@ -120,26 +118,17 @@ print(problem)
 #   using string methods, chop the last character(digit) from each string
 #   divide this running sum by ten
 #   add to keeping sum
-#
+#   stop doing this when the digit-strings have been shortened to nothing.
 #
 
 biglist=biglistofnumbers.splitlines()
-# print(biglist)
-# print(len(biglist))
-
-
-
 
 lastdigsum=0
-while biglist[0] != "":
+while len(biglist[0]) > 0:
   for i in range(len(biglist)):
     n=biglist[i]
-    last_char=int(n[-1])
-    m=n[:-1]
-    biglist[i]=m
-    lastdigsum+=last_char
-    #print(n,last_char,lastdigsum)
-  #print()
+    lastdigsum+=int(n[-1])
+    biglist[i]=n[:-1]
   lastdigsum/=10
   print(lastdigsum)
 
@@ -150,4 +139,3 @@ print('5537376230 are the first ten digits according to the internet')
 
 end = timer()
 print(end - start)
-
